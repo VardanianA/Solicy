@@ -4,6 +4,7 @@ const tabcontent = document.querySelectorAll('.menu .inner .container .content .
 
 container.addEventListener('click', open)
 
+// Open tab content
 function open(e) {
   e.preventDefault();
   const id = e.target.dataset.id;
