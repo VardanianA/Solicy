@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import './edit.css';
 
 
-const View = () => {
+const ViewAccount = () => {
   const [user, setTable] = useState({});
 
   const { id } = useParams();
@@ -42,4 +42,4 @@ const View = () => {
 }
 
 
-export default View;
+export default ViewAccount;

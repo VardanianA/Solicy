@@ -1,20 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import View from '../view';
-import Table from './Table';
-import './App.css';
+import ViewAccount from './ViewAccount';
+import Users from './Users';
+import '../../src/App.css';
 
 
-const Index = () => {
+const Accounts = () => {
   return (
     <div className="App">
       <Router>
         <Switch>
           <Route exact path='/accounts/'>
-            <Table />
+            <Users />
           </Route>
-          <Route path='/accounts/accounts/:id' children={<View />}>
-            <View />
+          <Route path='/accounts/accounts/:id' children={<ViewAccount />}>
+            <ViewAccount />
           </Route>
         </Switch>
       </Router>
@@ -23,4 +23,4 @@ const Index = () => {
 }
 
 
-export default Index;
+export default Accounts;
