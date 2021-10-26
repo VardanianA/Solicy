@@ -4,7 +4,7 @@ import ViewAccount from './ViewAccount';
 import Users from './Users';
 import '../../src/App.css';
 
-const Accounts = () => {
+const Routers = () => {
   return (
     <div className="App">
       <Router>
@@ -21,4 +21,4 @@ const Accounts = () => {
   );
 }
 
-export default Accounts;
+export default Routers;

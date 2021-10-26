@@ -1,10 +1,10 @@
-import Accounts from './components/Accounts';
+import Routers from './components/Routers';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Accounts />
+      <Routers />
     </div>
   );
 }
