@@ -4,7 +4,6 @@ import ViewAccount from './ViewAccount';
 import Users from './Users';
 import '../../src/App.css';
 
-
 const Accounts = () => {
   return (
     <div className="App">
@@ -21,6 +20,5 @@ const Accounts = () => {
     </div>
   );
 }
-
 
 export default Accounts;
