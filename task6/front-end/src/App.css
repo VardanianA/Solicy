@@ -8,3 +8,10 @@ td, th {
   padding: 0.5rem;
 }
 
+.ant-table-thead > tr > th{
+  background: #e3e2e2;
+}
+
+.ant-table-pagination.ant-pagination{
+  display: none;
+}

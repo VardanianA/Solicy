@@ -11,7 +11,7 @@ const Routers = () => {
         <Route exact path='/accounts/'>
           <Users />
         </Route>
-        <Route path='/accounts/accounts/:id' children={<ViewAccount />}>
+        <Route path='/accounts/:id' children={<ViewAccount />}>
           <ViewAccount />
         </Route>
       </Switch>

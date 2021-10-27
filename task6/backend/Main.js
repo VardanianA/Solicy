@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require("express");
 const app = express();
 const mongoose = require('mongoose');
-const table_router = require('./routers/tbl_routers');
 const routers = require('./routers/routers');
 
 
@@ -13,8 +12,8 @@ db.once('open', () => console.log(("Connected to the db")));
 
 
 app.use("", require("./routers/routers"))
-app.use('/accounts', table_router);
-app.use('/accounts/accounts/:id', routers);
+app.use('/accounts', routers);
+app.use('/accounts/:id', routers);
 
 
 app.listen(3001, () => {
