@@ -11,7 +11,7 @@ const db = mongoose.connection;
 //find data
 router.get('/accounts', (req, res) => {
     (async () => {
-         db.collection('tbl').find().toArray((err, data) => {
+        db.collection('tbl').find().toArray((err, data) => {
             if (err) {
                 res.json({ message: err.message });
             } else {
@@ -35,5 +35,18 @@ router.get('/accounts/:id', (req, res) => {
     })().catch((error) => console.log(error));
 });
 
+//delete
+router.delete('/accounts/delete/:id', (req, res) => {
+    let id = req.params.id;
+    (async () => {
+        db.collection('tbl').findOneAndDelete({ "_id": ObjectId(id) }, function (err, data) {
+            if (err) {
+                res.json({ message: err.message });
+            } else {
+                res.json({ data });
+            }
+        })
+    })().catch((error) => console.log(error));
+})
 
 module.exports = router;

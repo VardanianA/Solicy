@@ -5,7 +5,7 @@ import 'antd/dist/antd.css';
 import './edit.css';
 
 const ViewAccount = () => {
-  const [user, setTable] = useState([]);
+  const [user, setUser] = useState([]);
 
   const { id } = useParams();
 
@@ -14,36 +14,36 @@ const ViewAccount = () => {
       if (res.ok) {
         return res.json();
       }
-    }).then(jsonRes => setTable(jsonRes.data));
+    }).then(jsonRes => setUser(jsonRes.data));
   }, [])
 
   const columns = [
     {
-        title: 'ID',
-        dataIndex: '_id',
-        key: 'id'
+      title: 'ID',
+      dataIndex: '_id',
+      key: 'id'
     },
     {
-        title: 'Name',
-        dataIndex: 'name',
-        key: 'name'
+      title: 'Name',
+      dataIndex: 'name',
+      key: 'name'
     },
     {
-        title: 'Owner',
-        dataIndex: 'owner',
-        key: 'owner'
+      title: 'Owner',
+      dataIndex: 'owner',
+      key: 'owner'
     },
     {
-        title: 'Created On',
-        dataIndex: 'created_on',
-        key: 'created_on'
+      title: 'Created On',
+      dataIndex: 'created_on',
+      key: 'created_on'
     },
     {
       title: 'Update On',
       dataIndex: 'created_on',
       key: 'created_on'
-  },
-]
+    },
+  ]
 
   return (
     user &&

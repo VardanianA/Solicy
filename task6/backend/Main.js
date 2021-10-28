@@ -14,6 +14,7 @@ db.once('open', () => console.log(("Connected to the db")));
 app.use("", require("./routers/routers"))
 app.use('/accounts', routers);
 app.use('/accounts/:id', routers);
+app.use('/accounts/delete/:id', routers);
 
 
 app.listen(3001, () => {

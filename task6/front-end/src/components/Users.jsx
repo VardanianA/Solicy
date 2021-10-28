@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
-import { Table, Space } from 'antd';
 import 'antd/dist/antd.css';
+import { Table, Space } from 'antd';
+import axios from 'axios';
+
 
 const Users = () => {
     const [users, setUsers] = useState([]);
@@ -13,6 +15,17 @@ const Users = () => {
             }
         }).then(jsonRes => setUsers(jsonRes.data));
     }, []);
+
+    const deleteUser = (id) => {
+        axios.delete(`/accounts/delete/${id}`)
+            .then((res) => {
+                if (res.status === 200) {
+                    window.location.reload()
+                } else Promise.reject();
+            })
+            .catch((err) => alert("Something went wrong"));
+    };
+
 
     const columns = [
         {
@@ -41,11 +54,13 @@ const Users = () => {
             render: (user) => (
                 <Space size="middle">
                     <Link to={`/accounts/${user._id}`}>View Full Info</Link>
+                    <button onClick={() => { deleteUser(user._id) }} size="sm" variant="danger">Delete</button>
                 </Space>
             ),
         },
     ]
     return (
+        users &&
         <Table dataSource={users} columns={columns} >
         </Table>
     );
