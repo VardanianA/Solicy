@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.App{
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  width: 100%;
+}
+.mid{
+  border: 4px solid black;
+  height: 100%;
+}
+.left{
+  background-color: darkgray;
+  height: 7%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 1rem 0;
+}
+.left > input{
+  width: 100%;
+  margin: 15px auto;
+}
+.right > p{
+  background-color: darkgray;
+  height: 7%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 20vw;
+  color: rgb(151, 54, 151);
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+}
