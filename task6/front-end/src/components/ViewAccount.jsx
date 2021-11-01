@@ -20,35 +20,29 @@ const ViewAccount = () => {
   const columns = [
     {
       title: 'ID',
-      dataIndex: '_id',
-      key: 'id'
+      dataIndex: '_id'
     },
     {
       title: 'Name',
-      dataIndex: 'name',
-      key: 'name'
+      dataIndex: 'name'
     },
     {
       title: 'Owner',
-      dataIndex: 'owner',
-      key: 'owner'
+      dataIndex: 'owner'
     },
     {
       title: 'Created On',
-      dataIndex: 'created_on',
-      key: 'created_on'
+      dataIndex: 'created_on'
     },
     {
       title: 'Update On',
-      dataIndex: 'created_on',
-      key: 'created_on'
+      dataIndex: 'created_on'
     },
   ]
 
   return (
     user &&
-    <Table dataSource={[user]} columns={columns} >
-    </Table>
+    <Table dataSource={[user]} columns={columns} />
   );
 }
 

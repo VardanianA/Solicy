@@ -10,11 +10,11 @@ module.exports = db = mongoose.connection;
 db.on('error', (error) => console.log(error));
 db.once('open', () => console.log(("Connected to the db")));
 
-app.use("", require("./routers/routers"))
+app.use("", routers)
 app.use('/accounts', routers);
 app.use('/accounts/:id', routers);
 app.use('/accounts/delete/:id', routers);
 
 app.listen(3001, () => {
     console.log(`Server started at http://localhost:${3001}`);
-})
+});

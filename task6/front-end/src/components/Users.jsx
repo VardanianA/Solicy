@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { Table, Space } from 'antd';
 import 'antd/dist/antd.css';
-import axios from 'axios';
-
 
 const Users = () => {
     const [users, setUsers] = useState([]);
@@ -22,34 +20,28 @@ const Users = () => {
         })
             .then((res) => {
                 if (res.status === 200) {
-                    console.log('deleted successfully');
-                    // window.location.reload()
+                    window.location.reload()
                 } else Promise.reject();
             })
             .catch((err) => alert("Something went wrong"));
     };
 
-
     const columns = [
         {
             title: 'ID',
             dataIndex: '_id',
-            key: 'key',
         },
         {
             title: 'Name',
             dataIndex: 'name',
-            key: 'fdsg'
         },
         {
             title: 'Created On',
             dataIndex: 'created_on',
-            key: 'sfgg'
         },
         {
             title: 'Owner',
             dataIndex: 'owner',
-            key: 'dfh'
         },
         {
             title: 'Action',
@@ -61,13 +53,12 @@ const Users = () => {
                 </Space>
             ),
         },
-    ]
+    ];
+
     return (
         users &&
-        <Table dataSource={users} columns={columns} >
-        </Table>
+        <Table dataSource={users} columns={columns} />
     );
 }
-
 
 export default Users;
