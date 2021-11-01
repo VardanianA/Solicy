@@ -10,10 +10,10 @@ router.get('/accounts', (req, res) => {
         if (err) {
             res.json({ message: err.message });
         } else {
-            res.json({ data })
-        }
-    })
-})
+            res.json({ data });
+        };
+    });
+});
 
 //edit 
 router.get('/accounts/:id', (req, res) => {
@@ -22,9 +22,9 @@ router.get('/accounts/:id', (req, res) => {
         if (err) {
             res.json({ message: err.message });
         } else {
-            res.json({ data })
-        }
-    })
+            res.json({ data });
+        };
+    });
 });
 
 //delete
@@ -35,8 +35,8 @@ router.delete('/accounts/delete/:id', (req, res) => {
             res.json({ message: err.message });
         } else {
             res.json({ data });
-        }
-    })
-})
+        };
+    });
+});
 
 module.exports = router;

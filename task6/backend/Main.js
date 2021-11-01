@@ -10,7 +10,7 @@ module.exports = db = mongoose.connection;
 db.on('error', (error) => console.log(error));
 db.once('open', () => console.log(("Connected to the db")));
 
-app.use("", routers)
+app.use("", routers);
 app.use('/accounts', routers);
 app.use('/accounts/:id', routers);
 app.use('/accounts/delete/:id', routers);

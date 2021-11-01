@@ -31,6 +31,6 @@ function LeftForm() {
             </form>
         </div>
     );
-}
+};
 
 export default LeftForm;

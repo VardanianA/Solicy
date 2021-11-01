@@ -10,7 +10,7 @@ const Users = () => {
         fetch('/accounts').then(res => {
             if (res.ok) {
                 return res.json();
-            }
+            };
         }).then(jsonRes => setUsers(jsonRes.data));
     }, []);
 
@@ -20,7 +20,7 @@ const Users = () => {
         })
             .then((res) => {
                 if (res.status === 200) {
-                    window.location.reload()
+                    window.location.reload();
                 } else Promise.reject();
             })
             .catch((err) => alert("Something went wrong"));
@@ -29,19 +29,19 @@ const Users = () => {
     const columns = [
         {
             title: 'ID',
-            dataIndex: '_id',
+            dataIndex: '_id'
         },
         {
             title: 'Name',
-            dataIndex: 'name',
+            dataIndex: 'name'
         },
         {
             title: 'Created On',
-            dataIndex: 'created_on',
+            dataIndex: 'created_on'
         },
         {
             title: 'Owner',
-            dataIndex: 'owner',
+            dataIndex: 'owner'
         },
         {
             title: 'Action',

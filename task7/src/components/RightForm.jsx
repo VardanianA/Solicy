@@ -12,7 +12,7 @@ function RightForm() {
             <p>{midInputField.midInputField}</p>
             <p>{endInputField.endInputField}</p>
         </div>
-    )
-}
+    );
+};
 
 export default RightForm;

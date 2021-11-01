@@ -15,7 +15,7 @@ const ViewAccount = () => {
         return res.json();
       }
     }).then(jsonRes => setUser(jsonRes.data));
-  }, [])
+  }, []);
 
   const columns = [
     {
