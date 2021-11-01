@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
-import 'antd/dist/antd.css';
 import { Table, Space } from 'antd';
+import 'antd/dist/antd.css';
 import axios from 'axios';
 
 
@@ -17,10 +17,13 @@ const Users = () => {
     }, []);
 
     const deleteUser = (id) => {
-        axios.delete(`/accounts/delete/${id}`)
+        fetch(`/accounts/delete/${id}`, {
+            method: "DELETE",
+        })
             .then((res) => {
                 if (res.status === 200) {
-                    window.location.reload()
+                    console.log('deleted successfully');
+                    // window.location.reload()
                 } else Promise.reject();
             })
             .catch((err) => alert("Something went wrong"));

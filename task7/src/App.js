@@ -3,16 +3,15 @@ import LeftForm from './components/LeftForm';
 import RightForm from './components/RightForm';
 import './App.css';
 
-
 export const Context = React.createContext();
 
 function App() {
-  const [text1, setText1] = useState('');
-  const [text2, setText2] = useState('');
-  const [text3, setText3] = useState('');
+  const [inputField, setInputField] = useState('');
+  const [midInputField, setMidInputField] = useState('');
+  const [endInputField, setEndInputField] = useState('');
 
   return (
-    <Context.Provider value={{ text1, text2,text3, setText1, setText2, setText3 }}>
+    <Context.Provider value={{ inputField, midInputField, endInputField, setInputField, setMidInputField, setEndInputField }}>
       <div className="App">
         <LeftForm />
         <div className="mid"></div>

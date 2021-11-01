@@ -1,22 +1,23 @@
 import React, { useContext } from 'react';
 import { Context } from '../App';
 
-
-
 function LeftForm() {
-    const text1 = useContext(Context);
-    const text2 = useContext(Context);
-    const text3 = useContext(Context);
+    const inputField = useContext(Context);
+    const midInputField = useContext(Context);
+    const endInputField = useContext(Context);
 
     const handleChange1 = (e) => {
-        text1.setText1(e.target.value);
+        inputField.setInputField(e.target.value);
     }
+
     const handleChange2 = (e) => {
-        text2.setText2(e.target.value);
+        midInputField.setMidInputField(e.target.value);
     }
+
     const handleChange3 = (e) => {
-        text3.setText3(e.target.value);
+        endInputField.setEndInputField(e.target.value);
     }
+
     return (
         <div>
             <form className="left">

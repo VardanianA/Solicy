@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ViewAccount from './ViewAccount';
 import Users from './Users';
-import '../../src/App.css';
+
 
 const Routers = () => {
   return (
@@ -11,7 +11,7 @@ const Routers = () => {
         <Route exact path='/accounts/'>
           <Users />
         </Route>
-        <Route path='/accounts/:id' children={<ViewAccount />}>
+        <Route path='/accounts/:id'>
           <ViewAccount />
         </Route>
       </Switch>
