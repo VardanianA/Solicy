@@ -7,7 +7,7 @@ function RightForm() {
     return (
         <div className="right">
             {inputFields.map((field, index) => (
-                <p key={index}>{field}{console.log(field)} </p>
+                <p key={index}>{field}</p>
             ))}
         </div>
     );
