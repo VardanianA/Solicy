@@ -6,12 +6,10 @@ import './App.css';
 export const Context = React.createContext();
 
 function App() {
-  const [inputField, setInputField] = useState('');
-  const [midInputField, setMidInputField] = useState('');
-  const [endInputField, setEndInputField] = useState('');
+  const [inputFields, setInputField] = useState(['', '', '']);
 
   return (
-    <Context.Provider value={{ inputField, midInputField, endInputField, setInputField, setMidInputField, setEndInputField }}>
+    <Context.Provider value={{ inputFields, setInputField }}>
       <div className="App">
         <LeftForm />
         <div className="mid"></div>
