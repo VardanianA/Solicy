@@ -1,18 +1,18 @@
 import React, { useContext } from 'react';
-import { Context } from '../App';
+import { MyContext } from './Context';
 
 function LeftForm() {
-    const { inputFields, setInputField } = useContext(Context)
+    const { data, setData } = useContext(MyContext);
 
     const handlechange = (value, index) => {
-        inputFields[index] = value;
-        const newInputFields = [...inputFields];
-        setInputField(newInputFields);
+        const newData = [...data];
+        newData[index] = value;
+        setData(newData);
     };
 
     return (
         <div>
-            {inputFields.map((field, index) => (
+            {data.map((item, index) => (
                 <form className="left" key={index}>
                     <input type='text' onChange={(e) => handlechange(e.target.value, index)} />
                 </form>

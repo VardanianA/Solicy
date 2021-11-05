@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import { Context } from '../App';
+import { MyContext } from './Context';
 
 function RightForm() {
-    const { inputFields } = useContext(Context);
+    const { data } = useContext(MyContext);
 
     return (
         <div className="right">
-            {inputFields.map((field, index) => (
-                <p key={index}>{field}</p>
+            {data.map((item, index) => (
+                <p key={index}>{item}</p>
             ))}
         </div>
     );
