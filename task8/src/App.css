@@ -1,0 +1,45 @@
+*{
+  outline: none;
+  box-sizing: border-box;
+}
+
+.App{
+  padding: 1rem 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 100px auto;
+}
+
+.items{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 48%;
+}
+
+.item{
+  width: 20rem;
+  height: 20rem;
+}
+
+.btn{
+  padding: 1rem 5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: rgb(209, 159, 176);
+  color: rgb(209, 52, 105);
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: rgb(209, 52, 105);
+  color: rgb(209, 159, 176);
+}
