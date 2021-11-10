@@ -15,9 +15,9 @@ function Bathhub({ count, decCount }) {
 
     return (
         <div className="item">
-            {arr.map((item, index) => {
+            {arr.map(() => {
                 return (
-                    <AddElement item={item} key={index} />
+                    <AddElement />
                 )
             })}
         </div>

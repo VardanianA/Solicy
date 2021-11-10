@@ -1,7 +1,6 @@
-function AddElement({ index }) {
+function AddElement() {
     return (
-        <div className="add_element" key={index}>
-        </div>
+        <div className="add_element" />
     )
 }
 

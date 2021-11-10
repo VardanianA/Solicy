@@ -4,13 +4,12 @@ import Bathhub from "./Bathhub";
 
 function Section() {
   const [count, setCount] = useState(0);
-  const [decCount, setDecCount] = useState(4);
+  const [decCount, setDecCount] = useState(5)
 
   const addWater = () => {
     setInterval(() => {
       setCount(prevCount => prevCount + 1);
     }, 2000);
-
   }
 
   const deleteWater = () => {
