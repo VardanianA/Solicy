@@ -1,8 +1,8 @@
 function Buttons({ addWater, deleteWater }) {
     return (
         <div className="buttons">
-            <button className="btns" onClick={addWater}>add water</button>
-            <button className="btns" onClick={deleteWater}>delete water</button>
+            <button className="btns" onClick={addWater}>increaseWaterLevel</button>
+            <button className="btns" onClick={deleteWater}>decreaseWaterLevel</button>
         </div>
     )
 }
