@@ -8,13 +8,10 @@ function Bathhub({ count, decCount }) {
         if (count < 5) {
             setArr([...arr, count]);
         }
-    }, [count]);
-
-    useEffect(() => {
         if (decCount > -1) {
             arr.splice(decCount, 1);
         }
-    }, [decCount]);
+    }, [count, decCount]);
 
     return (
         <div className="item">
