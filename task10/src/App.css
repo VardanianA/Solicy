@@ -1,0 +1,52 @@
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 6rem;
+}
+.front, .back{
+  border: 1px solid black;
+  width: 150px;
+  height: 220px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+}
+
+.front {
+  background: orangered;
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.back{
+  transform: perspective(600px) rotateY(-180deg); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: orangered;
+}
+
+.card.rotated > .front{
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card.rotated > .back{ 
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.btn{
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  margin: 0 -2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
