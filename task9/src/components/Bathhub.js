@@ -1,23 +1,22 @@
 import { useState, useEffect } from "react";
-import AddElement from "./AddElement";
+import Water from "./Water";
 
-function Bathhub({ count, decCount }) {
+function Bathhub({ count }) {
     const [arr, setArr] = useState([]);
 
     useEffect(() => {
-        if (count < 5) {
-            setArr([...arr, count]);
+        const new_arr = [];
+        for (let i = 0; i <= count; i++) {
+            new_arr.push(i);
         }
-        if (decCount > -1) {
-            arr.splice(decCount, 1);
-        }
-    }, [count, decCount]);
+        setArr(new_arr);
+    }, [count])
 
     return (
         <div className="item">
             {arr.map(() => {
                 return (
-                    <AddElement />
+                    <Water />
                 )
             })}
         </div>

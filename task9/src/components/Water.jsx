@@ -1,7 +1,7 @@
-function AddElement() {
+function Water() {
     return (
         <div className="add_element" />
     )
 }
 
-export default AddElement;
+export default Water;

@@ -1,27 +1,38 @@
 import React, { useState } from "react"
-import Buttons from './Buttons';
 import Bathhub from "./Bathhub";
+import Buttons from './Buttons';
 
 function Section() {
   const [count, setCount] = useState(0);
-  const [decCount, setDecCount] = useState(5)
+
+  let startTime, interval;
 
   const addWater = () => {
-    setInterval(() => {
+    startTime = new Date().getTime();
+    interval = setInterval(() => {
       setCount(prevCount => prevCount + 1);
+      if (new Date().getTime() - startTime > 8000) {
+        clearInterval(interval);
+        return;
+      }
     }, 2000);
   }
 
   const deleteWater = () => {
-    setInterval(() => {
-      setDecCount(prevCount => prevCount - 1)
+    startTime = new Date().getTime();
+    interval = setInterval(() => {
+      setCount(prevCount => prevCount - 1);
+      if (new Date().getTime() - startTime > 8000) {
+        clearInterval(interval);
+        return;
+      }
     }, 2000);
   }
 
   return (
-    <div className="main-container">
+    <div className="main-container">{count}
       <Buttons addWater={addWater} deleteWater={deleteWater} />
-      <Bathhub count={count} decCount={decCount} />
+      <Bathhub count={count} />
     </div>
   )
 }
