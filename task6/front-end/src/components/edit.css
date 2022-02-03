@@ -1,0 +1,14 @@
+.transpose thead,
+.transpose tbody,
+.transpose tr {
+    display: inline-block;
+}
+
+.transpose tbody tr {
+    margin-right: -.27em;
+}
+
+.transpose th,
+.transpose td {
+    display: block;
+}
