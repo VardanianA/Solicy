@@ -14,9 +14,9 @@ function Bathhub({ count }) {
 
     return (
         <div className="item">
-            {arr.map(() => {
+            {arr.map((index) => {
                 return (
-                    <Water />
+                    <Water key={index}/>
                 )
             })}
         </div>
